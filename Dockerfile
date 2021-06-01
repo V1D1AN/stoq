@@ -71,6 +71,9 @@ RUN wget -O trid_linux_64.zip "http://mark0.net/download/trid_linux_64.zip" && \
     wget -O triddefs.zip "http://mark0.net/download/triddefs.zip" && \
     unzip -qq triddefs -d $STOQ_HOME/plugins/trid
 
+# MODIFICATION V1D1AN
+COPY watcher.py /usr/local/lib/python3.7/site-packages/watchgod/watcher.py
+
 # Clean up
 RUN rm -rf $STOQ_TMP /tmp/* /var/tmp/*
 
