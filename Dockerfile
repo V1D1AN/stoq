@@ -41,7 +41,7 @@ WORKDIR ${STOQ_TMP}
 # Install stoQ and plugins
 RUN pip install --no-cache-dir six asynctest && \
     python3 setup.py install && \
-    git clone --depth 1 -b v3 https://github.com/V1D1AN/stoq-plugins-public ${STOQ_TMP}/stoq-plugins-public && \
+    git clone --depth 1 -b mwdb https://github.com/V1D1AN/stoq-plugins-public ${STOQ_TMP}/stoq-plugins-public && \
     cd ${STOQ_TMP}/stoq-plugins-public && \
     for plugin in $(ls -d */); do stoq install $plugin; done
 
