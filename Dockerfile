@@ -6,7 +6,7 @@ ENV GROUP stoq
 ENV STOQ_HOME /home/$USER/.stoq
 ENV STOQ_TMP /tmp/stoq
 ENV XORSEARCH_VER 1_11_3
-ENV EXIFTOOL_VER 12.00
+ENV EXIFTOOL_VER 12.32
 
 RUN groupadd -r $GROUP && \
     useradd -r -g $GROUP $USER && \
