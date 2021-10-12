@@ -33,7 +33,7 @@ RUN apt-get update && \
     swig \
     lib32ncurses6 && \
     apt-get clean -y && \
-    apt-get remove -y clamav clamav-freshclam
+    apt-get remove -y clamav clamav-freshclam && \
     rm -rf /var/lib/apt/lists/*
 
 COPY . ${STOQ_TMP}
