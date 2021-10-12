@@ -26,12 +26,14 @@ RUN apt-get update && \
     unzip \
     wget \
     curl \
+    clamdscan \
     libfuzzy-dev \
     libc6-i386 \
     libssl-dev \
     swig \
     lib32ncurses6 && \
     apt-get clean -y && \
+    apt-get remove -y clamav clamav-freshclam
     rm -rf /var/lib/apt/lists/*
 
 COPY . ${STOQ_TMP}
